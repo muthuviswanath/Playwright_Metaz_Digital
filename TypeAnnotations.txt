@@ -1,0 +1,3 @@
+let variableName : Type;
+let variableName : Type = value;
+const constantName : Type = value;

@@ -1,0 +1,9 @@
+empname = "Kavin"
+empid = 1234
+salary = 56345.78
+department = "Automation"
+
+console:
+
+Employee named Kavin bearing the empid: 1234 is working in Automation department and
+earns the salary of 56345.78

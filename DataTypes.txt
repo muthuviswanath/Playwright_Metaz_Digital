@@ -1,0 +1,13 @@
+Primitive Types
+Object Types
+
+Primitive Types
+string      - to represent text
+number      - to represent numerical value
+boolean     - true or false
+null        - null
+undefined   - undefined
+symbol      - represent unique constant
+
+Object Types
+functions, arrays, class, custom Object
