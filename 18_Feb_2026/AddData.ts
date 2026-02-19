@@ -19,3 +19,20 @@ console.log(final_output_str)
 //It allows the function to accept multiple number of arguments with same or different data types
 //use ...args type[] to define the parameters with the same type
 //use ...args (type_1 | type_2 | ....... |type_n)[] to define the rest parameters with different types
+
+/**
+ * An e-commerce pricing engine which you will be developing must perform the following:
+ * 
+ * 1. Calculate the total price
+ * 2. Support different price strategies
+ * 3. handle multiple number of items
+ * 4. Apply optional discounts
+ * 
+ * 
+ * Laptop -> name, price
+ * Mouse -> name, price
+ * Projector -> name, price
+ * 
+ * Without discount = [Laptop, Mouse] = l.price + m.price
+ * with discount = [discount_type, laptop, mouse]
+*/

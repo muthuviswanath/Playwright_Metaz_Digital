@@ -1,0 +1,70 @@
+/**
+ * An e-commerce pricing engine which you will be developing must perform the following:
+ * 
+ * 1. Calculate the total price
+ * 2. Support different price strategies
+ * 3. handle multiple number of items
+ * 4. Apply optional discounts
+ * 
+ * 
+ * Laptop -> name, price
+ * Mouse -> name, price
+ * Projector -> name, price
+ * 
+ * Without discount = [Laptop, Mouse] = l.price + m.price
+ * with discount = [discount_type, laptop, mouse]
+*/
+
+// create an object literal
+
+type Item = {
+    name:string;
+    price:number;
+};
+
+
+//Pricing Strategy
+type pricingstrategy = (total:number) => number
+
+let noDiscount:pricingstrategy = total => total;
+let ugadiDiscount:pricingstrategy = total => total * 0.9; // 10 % off
+let tamilnewyearDiscount:pricingstrategy = total => total * 0.7; // 30 % off
+let vishuDiscount:pricingstrategy = total => total * 0.8; // 20 % off
+
+
+//functions with the signatures
+
+function calculatePrice(...items: Item[]):number
+function calculatePrice(strategy:pricingstrategy, ...items: Item[]):number
+
+//function implementation
+
+function calculatePrice(arg1:pricingstrategy | Item, ...rest:Item[]):number
+{
+    let strategy : pricingstrategy
+    let items : Item[]
+
+    if(typeof arg1 === 'function')  
+    {
+        strategy = arg1
+        items = rest
+    } 
+    else{
+        strategy = noDiscount
+        items = [arg1, ...rest]
+    }
+
+    let total = items.reduce((sum,item) => sum + item.price, 0)
+    return strategy(total)
+}
+
+//Objects creation
+let laptop : Item = {name:"HP Laptop", price:70000}
+let mouse : Item = {name:"Potronics mouse", price:700}
+let projector : Item = {name:"MI Projector", price:50000}
+
+//calculate without discount:
+
+let without_total = calculatePrice(laptop, mouse) //70700
+let with_discount_total = calculatePrice(vishuDiscount, laptop, mouse)//70700 - (70700 * 0.20 = 14140)
+//56560
