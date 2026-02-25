@@ -27,6 +27,11 @@ class Cash{}
 
 /*
 1. Rohan reads Novel
-2. Manu sells Vegetables
+2. MysoreManu sells Vegetables
 3. Cow gives Milk
+4. Conductor issues ticket by taking money and destination from the passenger
+
+1. Identify the Objects
+2. Use the appropriate methods inside the respective classes
+
 */
