@@ -1,0 +1,10 @@
+Base Class: Vehicle
+    method: getType()
+
+Derived Classes:
+    Car -> Specific Method: turnOnAC()
+    Bike -> Specific Method: KickStart()
+
+Create a Vehicle[] and store all the sub class objects
+
+Call sub class specific methods if the object belongs to car / bike respectively
