@@ -1,0 +1,18 @@
+/*
+It is a blueprint that is used to define the structure of the object
+
+It is possible to define:
+1. property names
+2. property types
+3. optional properties
+4. Methods
+5. Function signatures
+
+It will not generate JS code
+
+Syntax:
+interface InterfaceName{
+    properties
+    methods
+}
+*/
